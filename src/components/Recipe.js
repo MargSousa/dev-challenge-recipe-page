@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactHtmlParser from 'react-html-parser';
+import cheesecakeImage from '../challenge/photo1.png';
+import greyDots from '../challenge/6dots.svg';
 import './Recipe.css';
 
 const Recipe = () => {
@@ -48,37 +50,40 @@ const Recipe = () => {
     <div className="Recipe">
       <div className="main-title">Classic Cheesecake Recipe</div>
       <div className="main-intro">
+        <span className="six-dots"><img src={greyDots} alt="dots" /></span>
         Look no further for a creamy and ultra smooth classic cheesecake recipe! Paired with a buttery graham cracker crust, no one can deny its simple decadence. For the best results, bake in a water bath.
       </div>
-      <div className="recipe-image" />
+      <div className="recipe-image">
+        <img className="" src={cheesecakeImage} alt="Cheesecake" />
+      </div>
       <div className="recipe-information-section">
         <div className="recipe-time">
-          <div className="time-info">
-            <div><span className="material-icons servings">local_dining</span></div>
+          <div className="time-info responsive-servings">
+            <span className="material-icons servings">local_dining</span>
             <div>
               <div className="time-title">Yields</div>
-              <div className="time servings">12 servings</div>
+              <div className="time-text servings">12 servings</div>
             </div>
           </div>
           <div className="time-info">
-            <div><span className="material-icons">schedule</span></div>
+            <span className="material-icons">schedule</span>
             <div>
               <div className="time-title">Prep Time</div>
-              <div className="time">45 minutes</div>
+              <div className="time-text">45 minutes</div>
             </div>
           </div>
           <div className="time-info">
-            <div><span className="material-icons">schedule</span></div>
+            <span className="material-icons">schedule</span>
             <div>
               <div className="time-title">Cook Time</div>
-              <div className="time">1 hour</div>
+              <div className="time-text">1 hour</div>
             </div>
           </div>
           <div className="time-info">
-            <div><span className="material-icons">schedule</span></div>
+            <span className="material-icons">schedule</span>
             <div>
               <div className="time-title">Total Time</div>
-              <div className="time">7,75 hours</div>
+              <div className="time-text">7,75 hours</div>
             </div>
           </div>
         </div>

@@ -18,24 +18,26 @@
 
 .main-intro {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   font-style: italic;
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
   max-width: 592px;
-  color: #333333;
+  color: #4F4F4F;
 }
 
-.recipe-image {
-  background-image: url('../challenge/photo1.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 470px;
-  width: 100%;
+.six-dots {
+  margin-right: 12px;
+}
+
+.recipe-image { 
   border-radius: 12px;
   margin: 30px 0px 48px 0px;
+}
+
+.recipe-image img {
+  width: 100%;
 }
 
 .recipe-information-section {
@@ -99,7 +101,13 @@
   margin: 0px 0px 12px 17px;
   font-size: 16px;
   line-height: 25px;
+  color: #333333;
 }
+
+.ingredient b {
+  font-weight: 600;
+}
+
 
 .recipe-instruction {
   display: flex;
@@ -127,6 +135,10 @@
   color: #333333;
 }
 
+.recipe-instruction-text b {
+  font-weight: 600;
+}
+
 .time-title {
   font-weight: 700;
   font-size: 10px;
@@ -149,7 +161,7 @@
   font-size: 34px;
 }
 
-.time {
+.time-text {
   color: #333333;
   font-weight: 500;
   font-size: 14px;
@@ -161,9 +173,92 @@
 }
 
 .source-link {
+  display: flex;
+  flex-wrap: wrap;
   font-style: italic;
   font-size: 16px;
   line-height: 24px;
   color: #BDBDBD;
   margin-top: 55px;
+}
+
+@media(max-width: 768px) {
+  .Recipe {
+    margin: 15px 11px 0px 11px;
+  }
+  .main-title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .main-intro {
+    font-size: 12px;
+    line-height: 15px;
+    max-width: 392px;
+  }
+  .recipe-image { 
+    margin: 30px 0px 28px 0px;
+  }
+  .recipe-information-section {
+    flex-direction: column;
+  }
+  .recipe-details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .recipe-title {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .recipe-subtitle {
+    font-size: 16px;
+    line-height: 21px;
+    margin: 20px 0px 20px 0px;
+  }
+  .ingredient {
+    font-size: 14px;
+    line-height: 25px;
+    margin: 0px 0px 12px 8px;
+  }
+  .recipe-instruction-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .source-link {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .recipe-time {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-shadow: 0px 0px 0px 0px;
+    border-radius: 0px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  .time-info {
+    margin: 0px 15px 10px 0px;
+    width: auto;
+  }
+  .responsive-servings {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .material-icons {
+    margin-right: 5px;
+    font-size: 24px;
+  }
+  .time-title {
+    margin-bottom: 0px;
+    font-size: 8px;
+    line-height: 10px;
+  }
+  .time-text {
+    font-size: 10px;
+    line-height: 12px;
+  }
+  
 }
